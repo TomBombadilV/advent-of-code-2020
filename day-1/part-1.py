@@ -19,7 +19,7 @@ def findPair(nums: List, target: int) -> int:
             s.add(n)
     return -1
 
-def main():
+if __name__ == "__main__":
     # Parse input file
     with open('input.txt', 'r') as file:
         nums = [int(line.strip()) for line in file]
@@ -29,5 +29,3 @@ def main():
 
     # Find pair
     print("Product is {0}".format(findPair(nums, target)))
-
-main()
