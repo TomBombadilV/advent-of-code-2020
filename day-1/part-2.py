@@ -32,8 +32,7 @@ def findTriple(nums: List, target: int) -> int:
 
     return -1
 
-def main():
-
+if __name__ == "__main__":
     # Parse input file
     with open('input.txt', 'r') as file:
         nums = [int(line.strip()) for line in file]
@@ -43,5 +42,3 @@ def main():
 
     # Find triple
     print("Product: {0}".format(findTriple(nums, target)))
-
-main()
