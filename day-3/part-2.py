@@ -12,7 +12,7 @@ def tree_product(M: List[str], slopes: List[Tuple[int]]) -> int:
     
     return product
 
-def main():
+if __name__ == "__main__":
     # Parse input
     with open("input.txt", "r") as file:
         lines = [line.strip() for line in file]
@@ -22,5 +22,3 @@ def main():
 
     # Count trees encountered
     print("{0} trees encountered".format(tree_product(lines, slopes)))
-
-main()
