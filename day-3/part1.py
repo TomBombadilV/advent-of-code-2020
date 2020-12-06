@@ -28,7 +28,7 @@ def count_trees(M: List[str], right: int, down: int) -> int:
 
     return trees
 
-def main():
+if __name__ == "__main__":
     # Parse input
     with open("input.txt", "r") as file:
         lines = [line.strip() for line in file]
@@ -38,5 +38,3 @@ def main():
 
     # Count trees encountered
     print("{0} trees encountered".format(count_trees(lines, right, down)))
-
-main()
