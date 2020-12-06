@@ -29,14 +29,16 @@ def get_max_code(seats: List[str], rows, cols) -> int:
     """ Convert all seats into seat codes, find max """
     max_code = 0
     max_seat = ""
+
     for seat in seats:
         seat_code = decode(seat, rows, cols)
-        #max_code = max(max_code, seat_code)
-        if seat_code > max_code:
-            max_code = seat_code
-            max_seat = seat
+        max_code = max(max_code, seat_code)
+        #if seat_code > max_code:
+        #    max_code = seat_code
+        #    max_seat = seat
 
-    return (max_code, max_seat)
+    return max_code
+    #return (max_code, max_seat)
 
 if __name__ == "__main__":
     # Parse input
