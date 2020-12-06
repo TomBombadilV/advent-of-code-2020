@@ -31,12 +31,10 @@ def count_valid_passwords(lines: List[str]) -> int:
 
     return count
 
-def main():
+if __name__ == "__main__":
     # Parse input
     with open("input.txt", "r") as file:
         lines = [line.strip() for line in file]
     
     # Count number of valid passwords
     print("{0} valid passwords".format(count_valid_passwords(lines)))
-
-main()
