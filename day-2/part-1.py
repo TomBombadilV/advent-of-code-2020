@@ -1,5 +1,7 @@
 # Day 2 Part 1
 
+from typing import List
+
 def check_password(rule: str, password: str) -> bool:
     """ Checks validity of a password based on a rule
         which determines the upper and lower count of a 
@@ -15,7 +17,7 @@ def check_password(rule: str, password: str) -> bool:
     # Check against limits
     return count >= int(low) and count <= int(high)
 
-def count_valid_passwords(lines):
+def count_valid_passwords(lines: List[str]):
     """ Counts the number of valid passwords by parsing
         lines containing a rule and a password
     """
