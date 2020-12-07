@@ -1,8 +1,9 @@
 # Day 7 Part 1
 
 from collections import defaultdict
-import re
 from typing import Dict, List
+
+import re
 
 def dfs_util(graph: Dict[str, List[str]], source: str) -> int:
     # Count of bags including outer bag
