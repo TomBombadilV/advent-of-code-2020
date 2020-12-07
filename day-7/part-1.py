@@ -81,7 +81,7 @@ def count_bags(rules: List[str], bag: str) -> int:
 
 if __name__ == "__main__":
     # Parse input
-    with open("input_test.txt", "r") as file:
+    with open("input.txt", "r") as file:
         lines = [line.strip() for line in file]
 
     # Define target bag
