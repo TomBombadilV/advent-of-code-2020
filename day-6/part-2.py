@@ -1,4 +1,4 @@
-# Day 6 Part 1
+# Day 6 Part 2
 
 from collections import Counter
 from typing import List
