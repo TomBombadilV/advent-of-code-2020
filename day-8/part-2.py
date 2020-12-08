@@ -83,4 +83,4 @@ if __name__ == "__main__":
         lines = [line.strip() for line in file]
 
     # Execute instructions
-    print("Accumulator contains {0} at loop".format(execute(lines)))
+    print("Accumulator contains {0} at the end".format(execute(lines)))
