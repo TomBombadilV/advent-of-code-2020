@@ -28,7 +28,6 @@ def execute(instructions: List[str]) -> int:
         if op == "jmp":
             i += arg - 1  # -1 to take into account the coming i+=1
         if op == "acc":
-            print("here")
             acc += arg
         i += 1 
 
