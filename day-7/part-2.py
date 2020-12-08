@@ -1,4 +1,4 @@
-# Day 7 Part 1
+# Day 7 Part 2
 
 from collections import defaultdict
 from typing import Dict, List
