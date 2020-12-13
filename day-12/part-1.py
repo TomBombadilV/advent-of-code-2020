@@ -5,9 +5,8 @@ import math
 
 def parse_instruction(instruction: str, direction: int, lat: int, lon: int)\
     -> Union[int, int, int]:
-    """ Parses instruction and returns new current
-        directiontion (as degrees rotation clockwise from North) 
-        and coordinates.
+    """ Parses instruction and returns new direction (as 
+        degrees rotation clockwise from North) and coordinates.
     """
     # Parse instruction string
     action, val = instruction[:1], int(instruction[1:])
@@ -18,7 +17,7 @@ def parse_instruction(instruction: str, direction: int, lat: int, lon: int)\
     elif action == 'R':
         direction = (direction + val) % 360
     
-    # All other directiontions change coordinates of ship
+    # All other direction change coordinates of ship
     elif action == 'N':
         lat += val
     elif action == 'S':
