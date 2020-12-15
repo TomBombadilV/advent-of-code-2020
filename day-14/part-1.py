@@ -13,7 +13,7 @@ def mask_num(bitmask: str, num: int) -> int:
         if bitmask[-(i + 1)] == "0":
             num &= ~(1 << i)  # Set ith bit to 0
         elif bitmask[-(i + 1)] == "1":
-            num |= (1 << i)  # Set ith bit to n
+            num |= (1 << i)  # Set ith bit to 1
         else:
             pass
     return num
