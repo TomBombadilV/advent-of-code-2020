@@ -7,7 +7,6 @@ import re
 
 def mask_num(bitmask: str, num: int) -> int:
     """ Takes a number and masks it with bitmask """
-    i = 0
     # Iterate through bitmask
     for i in range(len(bitmask)):
         # Want to iterate bitmask from right to left
