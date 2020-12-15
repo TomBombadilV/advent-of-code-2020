@@ -46,7 +46,6 @@ def parse(lines: List[str]) -> int:
     mask = ""
     
     for line in lines:
-        print(line)
         if line[:4] == "mask":
             # Get new bitmask
             mask = line.split(" = ")[1]
