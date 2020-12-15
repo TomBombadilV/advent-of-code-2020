@@ -1,4 +1,4 @@
-# Day 15 Part 1
+# Day 15 Part 2
 
 from typing import List
 
