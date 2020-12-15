@@ -3,7 +3,16 @@
 from typing import List
 
 def number_suffix(n: int) -> str:
-    return "st" if n % 10 == 1 else "th"
+    """ Returns proper suffix (ex: 1 -> 1st, 2 -> 2nd)"""
+    dig = n % 10
+    if dig == 1:
+        return "st"
+    elif dig == 2:
+        return "nd"
+    elif dig == 3:
+        return "rd"
+    else:
+        return "th"
 
 def play(arr: List[int], n: int) -> int:
     """ Takes an array of numbers, plays game according
@@ -16,21 +25,26 @@ def play(arr: List[int], n: int) -> int:
     dic = {}
     curr, i = 0, 0
 
+    # Add all but last starting number to dictionary
     while i < len(arr) - 1:
         curr = arr[i]
         dic[curr] = i
         i += 1
 
+    # Move to last starting number
     curr = arr[i]
 
+    # Iterate to nth move
     while i < n - 1:
+        # Check if previous number has been spoken
         if curr not in dic:
             dic[curr] = i
             curr = 0
+        # If not
         else:
-            prev = dic[curr]
-            dic[curr] = i
-            diff = i - prev
+            # Get last index and calculate difference
+            diff = i - dic[curr]
+            dic[curr] = i  # Update with new index
             curr = diff
         i += 1
 
