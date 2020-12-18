@@ -8,12 +8,13 @@ def num_active_neighbors(cubes: Dict[Tuple[int], int], w: int,\
         and sums how many active neighbors it has
     """
     active = 0
-
+    # Check all neighbors (-1, 0, and 1)
     for i in range(-1, 2):
         for j in range(-1, 2):
             for k in range(-1, 2):
                 for l in range(-1, 2):
                     curr = (w + i, x + j, y + k, z + l)
+                    # Make sure not original cube
                     if curr in cubes and curr != (w, x, y, z):
                         active += cubes[curr]
     return active
@@ -38,8 +39,10 @@ def boot(cubes: Dict[Tuple[int], int], m: int, n: int, o: int, p: int, cycles: i
 
     # Iterate number of cycles
     for h in range(1, cycles + 1):
-        print("Cycle ", h)
+        # Store new cubes
         new_cubes = {}
+
+        # Iterate through map
         for i in range(-h, m + h):
             for j in range(-h, n + h):
                 for k in range(-h, o + h):
@@ -62,7 +65,7 @@ def boot(cubes: Dict[Tuple[int], int], m: int, n: int, o: int, p: int, cycles: i
                         # Nothing changed
                         else:
                             new_cubes[(i, j, k, l)] = cubes[(i, j, k, l)]
-         
+        # Save new map 
         cubes = new_cubes
 
     return total_active
