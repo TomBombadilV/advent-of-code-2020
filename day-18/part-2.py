@@ -1,11 +1,9 @@
-# Day 18 Part 1
+# Day 18 Part 2
 
 from typing import List
 
 def evaluate(expr: List[str], i: int) -> int:
     """ Evaluates mathematical expression """
-    val = 0
-    op = ""
     
     new_expr = []
     
